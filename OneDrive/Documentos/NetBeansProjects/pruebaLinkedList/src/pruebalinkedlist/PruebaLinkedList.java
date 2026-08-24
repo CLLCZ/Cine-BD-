@@ -40,6 +40,14 @@ class LnkdLst {
         }
         current.next = newStudent;
     }
+    
+    public void print() {
+        Student current = this.head;
+        while (current != null) {
+            System.out.println(current.name + " - " + current.score);
+            current = current.next;
+        }
+    }
 }
 
 
@@ -51,6 +59,7 @@ public class PruebaLinkedList {
         lista.add( "Ada" , 95);
         lista.add( "Paul", 78);
         
+        lista.print();
     }
     
 }
