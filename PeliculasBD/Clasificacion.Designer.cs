@@ -37,10 +37,15 @@
             btnObtener = new ToolStripLabel();
             btnSalir = new ToolStripLabel();
             dgvClasificacion = new DataGridView();
-            lbidPelicula = new Label();
-            lbnombrePelicula = new Label();
+            lbidClasificacion = new Label();
+            lbclave = new Label();
             lbDura = new Label();
-            label4 = new Label();
+            lbdescripcion = new Label();
+            lbfechaHoraCreacion = new Label();
+            txtidClasificacion = new TextBox();
+            txtclave = new TextBox();
+            txtdescripcion = new TextBox();
+            dateTimePickercreacion = new DateTimePicker();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClasificacion).BeginInit();
             SuspendLayout();
@@ -105,7 +110,7 @@
             dgvClasificacion.AllowUserToDeleteRows = false;
             dgvClasificacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvClasificacion.Location = new Point(36, 54);
-            dgvClasificacion.Margin = new Padding(2, 2, 2, 2);
+            dgvClasificacion.Margin = new Padding(2);
             dgvClasificacion.Name = "dgvClasificacion";
             dgvClasificacion.ReadOnly = true;
             dgvClasificacion.RowHeadersWidth = 62;
@@ -113,23 +118,23 @@
             dgvClasificacion.Size = new Size(921, 251);
             dgvClasificacion.TabIndex = 1;
             // 
-            // lbidPelicula
+            // lbidClasificacion
             // 
-            lbidPelicula.AutoSize = true;
-            lbidPelicula.Location = new Point(95, 348);
-            lbidPelicula.Name = "lbidPelicula";
-            lbidPelicula.Size = new Size(85, 20);
-            lbidPelicula.TabIndex = 2;
-            lbidPelicula.Text = "ID Pelicula: ";
+            lbidClasificacion.AutoSize = true;
+            lbidClasificacion.Location = new Point(95, 348);
+            lbidClasificacion.Name = "lbidClasificacion";
+            lbidClasificacion.Size = new Size(118, 20);
+            lbidClasificacion.TabIndex = 2;
+            lbidClasificacion.Text = "ID Clasificación: ";
             // 
-            // lbnombrePelicula
+            // lbclave
             // 
-            lbnombrePelicula.AutoSize = true;
-            lbnombrePelicula.Location = new Point(95, 405);
-            lbnombrePelicula.Name = "lbnombrePelicula";
-            lbnombrePelicula.Size = new Size(125, 20);
-            lbnombrePelicula.TabIndex = 3;
-            lbnombrePelicula.Text = "Nombre Pelicula: ";
+            lbclave.AutoSize = true;
+            lbclave.Location = new Point(95, 405);
+            lbclave.Name = "lbclave";
+            lbclave.Size = new Size(52, 20);
+            lbclave.TabIndex = 3;
+            lbclave.Text = "Clave: ";
             // 
             // lbDura
             // 
@@ -140,27 +145,69 @@
             lbDura.TabIndex = 4;
             lbDura.Text = "label3";
             // 
-            // label4
+            // lbdescripcion
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(439, 367);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 20);
-            label4.TabIndex = 5;
-            label4.Text = "label4";
+            lbdescripcion.AutoSize = true;
+            lbdescripcion.Location = new Point(468, 348);
+            lbdescripcion.Name = "lbdescripcion";
+            lbdescripcion.Size = new Size(94, 20);
+            lbdescripcion.TabIndex = 5;
+            lbdescripcion.Text = "Descripción: ";
+            // 
+            // lbfechaHoraCreacion
+            // 
+            lbfechaHoraCreacion.AutoSize = true;
+            lbfechaHoraCreacion.Location = new Point(364, 403);
+            lbfechaHoraCreacion.Name = "lbfechaHoraCreacion";
+            lbfechaHoraCreacion.Size = new Size(198, 20);
+            lbfechaHoraCreacion.TabIndex = 6;
+            lbfechaHoraCreacion.Text = "Fecha y hora de la Creación: ";
+            // 
+            // txtidClasificacion
+            // 
+            txtidClasificacion.Location = new Point(219, 345);
+            txtidClasificacion.Name = "txtidClasificacion";
+            txtidClasificacion.Size = new Size(125, 27);
+            txtidClasificacion.TabIndex = 7;
+            // 
+            // txtclave
+            // 
+            txtclave.Location = new Point(219, 402);
+            txtclave.Name = "txtclave";
+            txtclave.Size = new Size(125, 27);
+            txtclave.TabIndex = 8;
+            // 
+            // txtdescripcion
+            // 
+            txtdescripcion.Location = new Point(579, 345);
+            txtdescripcion.Name = "txtdescripcion";
+            txtdescripcion.Size = new Size(125, 27);
+            txtdescripcion.TabIndex = 9;
+            // 
+            // dateTimePickercreacion
+            // 
+            dateTimePickercreacion.Location = new Point(579, 400);
+            dateTimePickercreacion.Name = "dateTimePickercreacion";
+            dateTimePickercreacion.Size = new Size(250, 27);
+            dateTimePickercreacion.TabIndex = 10;
             // 
             // Clasificacion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(994, 574);
-            Controls.Add(label4);
+            Controls.Add(dateTimePickercreacion);
+            Controls.Add(txtdescripcion);
+            Controls.Add(txtclave);
+            Controls.Add(txtidClasificacion);
+            Controls.Add(lbfechaHoraCreacion);
+            Controls.Add(lbdescripcion);
             Controls.Add(lbDura);
-            Controls.Add(lbnombrePelicula);
-            Controls.Add(lbidPelicula);
+            Controls.Add(lbclave);
+            Controls.Add(lbidClasificacion);
             Controls.Add(dgvClasificacion);
             Controls.Add(toolStrip1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Clasificacion";
             Text = "Clasificacion";
             toolStrip1.ResumeLayout(false);
@@ -181,9 +228,14 @@
         private ToolStripLabel btnObtener;
         private ToolStripLabel btnSalir;
         private DataGridView dgvClasificacion;
-        private Label lbidPelicula;
-        private Label lbnombrePelicula;
+        private Label lbidClasificacion;
+        private Label lbclave;
         private Label lbDura;
-        private Label label4;
+        private Label lbdescripcion;
+        private Label lbfechaHoraCreacion;
+        private TextBox txtidClasificacion;
+        private TextBox txtclave;
+        private TextBox txtdescripcion;
+        private DateTimePicker dateTimePickercreacion;
     }
 }

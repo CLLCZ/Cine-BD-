@@ -37,6 +37,9 @@
             btnCancelar = new ToolStripLabel();
             btnObtener = new ToolStripLabel();
             btnSalir = new ToolStripLabel();
+            lbidGenero = new Label();
+            lbnombreGenero = new Label();
+            lbdescripcionGenero = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvGenero).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -108,11 +111,41 @@
             btnSalir.Size = new Size(38, 22);
             btnSalir.Text = "Salir";
             // 
+            // lbidGenero
+            // 
+            lbidGenero.AutoSize = true;
+            lbidGenero.Location = new Point(64, 306);
+            lbidGenero.Name = "lbidGenero";
+            lbidGenero.Size = new Size(83, 20);
+            lbidGenero.TabIndex = 4;
+            lbidGenero.Text = "ID Genero: ";
+            // 
+            // lbnombreGenero
+            // 
+            lbnombreGenero.AutoSize = true;
+            lbnombreGenero.Location = new Point(70, 366);
+            lbnombreGenero.Name = "lbnombreGenero";
+            lbnombreGenero.Size = new Size(148, 20);
+            lbnombreGenero.TabIndex = 5;
+            lbnombreGenero.Text = "Nombre del Genero: ";
+            // 
+            // lbdescripcionGenero
+            // 
+            lbdescripcionGenero.AutoSize = true;
+            lbdescripcionGenero.Location = new Point(345, 318);
+            lbdescripcionGenero.Name = "lbdescripcionGenero";
+            lbdescripcionGenero.Size = new Size(167, 20);
+            lbdescripcionGenero.TabIndex = 6;
+            lbdescripcionGenero.Text = "Descripción del Genero:";
+            // 
             // Genero
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbdescripcionGenero);
+            Controls.Add(lbnombreGenero);
+            Controls.Add(lbidGenero);
             Controls.Add(dgvGenero);
             Controls.Add(toolStrip1);
             Name = "Genero";
@@ -135,5 +168,8 @@
         private ToolStripLabel btnCancelar;
         private ToolStripLabel btnObtener;
         private ToolStripLabel btnSalir;
+        private Label lbidGenero;
+        private Label lbnombreGenero;
+        private Label lbdescripcionGenero;
     }
 }

@@ -42,11 +42,11 @@
             lbnombrePelicula = new Label();
             lbidPelicula = new Label();
             lbidClasificacion = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            txtidPelicula = new TextBox();
+            txtnombrePelicula = new TextBox();
+            txtduracion = new TextBox();
+            txtidGenero = new TextBox();
+            txtidClasificacion = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvpelicula).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -163,51 +163,51 @@
             lbidClasificacion.TabIndex = 10;
             lbidClasificacion.Text = "ID Clasificación:";
             // 
-            // textBox1
+            // txtidPelicula
             // 
-            textBox1.Location = new Point(220, 335);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 11;
+            txtidPelicula.Location = new Point(220, 335);
+            txtidPelicula.Name = "txtidPelicula";
+            txtidPelicula.Size = new Size(125, 27);
+            txtidPelicula.TabIndex = 11;
             // 
-            // textBox2
+            // txtnombrePelicula
             // 
-            textBox2.Location = new Point(220, 379);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 12;
+            txtnombrePelicula.Location = new Point(220, 379);
+            txtnombrePelicula.Name = "txtnombrePelicula";
+            txtnombrePelicula.Size = new Size(125, 27);
+            txtnombrePelicula.TabIndex = 12;
             // 
-            // textBox3
+            // txtduracion
             // 
-            textBox3.Location = new Point(220, 425);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 13;
+            txtduracion.Location = new Point(220, 425);
+            txtduracion.Name = "txtduracion";
+            txtduracion.Size = new Size(125, 27);
+            txtduracion.TabIndex = 13;
             // 
-            // textBox4
+            // txtidGenero
             // 
-            textBox4.Location = new Point(557, 335);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 14;
+            txtidGenero.Location = new Point(557, 335);
+            txtidGenero.Name = "txtidGenero";
+            txtidGenero.Size = new Size(125, 27);
+            txtidGenero.TabIndex = 14;
             // 
-            // textBox5
+            // txtidClasificacion
             // 
-            textBox5.Location = new Point(557, 392);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 15;
+            txtidClasificacion.Location = new Point(557, 392);
+            txtidClasificacion.Name = "txtidClasificacion";
+            txtidClasificacion.Size = new Size(125, 27);
+            txtidClasificacion.TabIndex = 15;
             // 
             // Pelicula
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 562);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtidClasificacion);
+            Controls.Add(txtidGenero);
+            Controls.Add(txtduracion);
+            Controls.Add(txtnombrePelicula);
+            Controls.Add(txtidPelicula);
             Controls.Add(lbidClasificacion);
             Controls.Add(lbidGenero);
             Controls.Add(lbduracion);
@@ -240,10 +240,10 @@
         private Label lbnombrePelicula;
         private Label lbidPelicula;
         private Label lbidClasificacion;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtidPelicula;
+        private TextBox txtnombrePelicula;
+        private TextBox txtduracion;
+        private TextBox txtidGenero;
+        private TextBox txtidClasificacion;
     }
 }
