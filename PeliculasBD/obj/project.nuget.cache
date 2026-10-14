@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oHeOLVTO0NA=",
+  "dgSpecHash": "duo3Swvy2U4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\usuario\\Source\\Repos\\Cine-BD-\\PeliculasBD\\PeliculasBD.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\camil\\source\\repos\\Cine-BD-\\PeliculasBD\\PeliculasBD.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.31\\microsoft.windowsdesktop.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.31\\microsoft.netcore.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.31\\microsoft.aspnetcore.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.31\\microsoft.netcore.app.host.win-x64.8.0.31.nupkg.sha512"
+  ],
   "logs": []
 }
