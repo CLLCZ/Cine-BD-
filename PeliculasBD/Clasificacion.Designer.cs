@@ -39,6 +39,7 @@
             dgvClasificacion = new DataGridView();
             lbidClasificacion = new Label();
             lbclave = new Label();
+            lbDura = new Label();
             lbdescripcion = new Label();
             txtidClasificacion = new TextBox();
             comboBox2 = new ComboBox();
@@ -133,6 +134,15 @@
             lbclave.TabIndex = 3;
             lbclave.Text = "Clave: ";
             // 
+            // lbDura
+            // 
+            lbDura.AutoSize = true;
+            lbDura.Location = new Point(108, 499);
+            lbDura.Name = "lbDura";
+            lbDura.Size = new Size(50, 20);
+            lbDura.TabIndex = 4;
+            lbDura.Text = "label3";
+            // 
             // lbdescripcion
             // 
             lbdescripcion.AutoSize = true;
@@ -176,6 +186,7 @@
             Controls.Add(comboBox2);
             Controls.Add(txtidClasificacion);
             Controls.Add(lbdescripcion);
+            Controls.Add(lbDura);
             Controls.Add(lbclave);
             Controls.Add(lbidClasificacion);
             Controls.Add(dgvClasificacion);
@@ -203,6 +214,7 @@
         private DataGridView dgvClasificacion;
         private Label lbidClasificacion;
         private Label lbclave;
+        private Label lbDura;
         private Label lbdescripcion;
         private TextBox txtidClasificacion;
         private ComboBox comboBox2;
