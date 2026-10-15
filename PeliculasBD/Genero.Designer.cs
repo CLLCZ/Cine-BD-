@@ -117,7 +117,7 @@
             // lbidGenero
             // 
             lbidGenero.AutoSize = true;
-            lbidGenero.Location = new Point(135, 319);
+            lbidGenero.Location = new Point(64, 306);
             lbidGenero.Name = "lbidGenero";
             lbidGenero.Size = new Size(83, 20);
             lbidGenero.TabIndex = 4;
@@ -135,7 +135,7 @@
             // lbdescripcionGenero
             // 
             lbdescripcionGenero.AutoSize = true;
-            lbdescripcionGenero.Location = new Point(444, 319);
+            lbdescripcionGenero.Location = new Point(345, 318);
             lbdescripcionGenero.Name = "lbdescripcionGenero";
             lbdescripcionGenero.Size = new Size(167, 20);
             lbdescripcionGenero.TabIndex = 6;
@@ -157,20 +157,20 @@
             cbnombreGenero.Size = new Size(151, 28);
             cbnombreGenero.TabIndex = 10;
             // 
-            // cbdescripciongenero
+            // comboBox2
             // 
-            cbdescripciongenero.FormattingEnabled = true;
-            cbdescripciongenero.Location = new Point(489, 358);
-            cbdescripciongenero.Name = "cbdescripciongenero";
-            cbdescripciongenero.Size = new Size(227, 28);
-            cbdescripciongenero.TabIndex = 11;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(489, 358);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(227, 28);
+            comboBox2.TabIndex = 11;
             // 
             // Genero
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(cbdescripciongenero);
+            Controls.Add(comboBox2);
             Controls.Add(cbnombreGenero);
             Controls.Add(txtidGenero);
             Controls.Add(lbdescripcionGenero);
@@ -203,6 +203,6 @@
         private Label lbdescripcionGenero;
         private TextBox txtidGenero;
         private ComboBox cbnombreGenero;
-        private ComboBox cbdescripciongenero;
+        private ComboBox comboBox2;
     }
 }

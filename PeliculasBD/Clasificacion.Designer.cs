@@ -40,9 +40,13 @@
             lbidClasificacion = new Label();
             lbclave = new Label();
             lbdescripcion = new Label();
+            lbfechaHoraCreacion = new Label();
             txtidClasificacion = new TextBox();
             cbdescripcion = new ComboBox();
             cbclave = new ComboBox();
+            txtclave = new TextBox();
+            txtdescripcion = new TextBox();
+            dateTimePickercreacion = new DateTimePicker();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClasificacion).BeginInit();
             SuspendLayout();
@@ -127,7 +131,7 @@
             // lbclave
             // 
             lbclave.AutoSize = true;
-            lbclave.Location = new Point(410, 353);
+            lbclave.Location = new Point(95, 405);
             lbclave.Name = "lbclave";
             lbclave.Size = new Size(52, 20);
             lbclave.TabIndex = 3;
@@ -136,11 +140,20 @@
             // lbdescripcion
             // 
             lbdescripcion.AutoSize = true;
-            lbdescripcion.Location = new Point(413, 395);
+            lbdescripcion.Location = new Point(468, 348);
             lbdescripcion.Name = "lbdescripcion";
             lbdescripcion.Size = new Size(94, 20);
             lbdescripcion.TabIndex = 5;
             lbdescripcion.Text = "Descripción: ";
+            // 
+            // lbfechaHoraCreacion
+            // 
+            lbfechaHoraCreacion.AutoSize = true;
+            lbfechaHoraCreacion.Location = new Point(364, 403);
+            lbfechaHoraCreacion.Name = "lbfechaHoraCreacion";
+            lbfechaHoraCreacion.Size = new Size(198, 20);
+            lbfechaHoraCreacion.TabIndex = 6;
+            lbfechaHoraCreacion.Text = "Fecha y hora de la Creación: ";
             // 
             // txtidClasificacion
             // 
@@ -149,23 +162,21 @@
             txtidClasificacion.Size = new Size(125, 27);
             txtidClasificacion.TabIndex = 7;
             // 
-            // cbdescripcion
+            // comboBox2
             // 
-            cbdescripcion.FormattingEnabled = true;
-            cbdescripcion.Items.AddRange(new object[] { "Todos los públicos pueden ver, aunque esta clasificación va dirigida a un público preescolar", "Apto para todo público, sugerido a mayores de 7 años", "Para mayores de 12 años, menores requieren supervisión", "Para mayores de 15 años, menores requieren supervisión", "Sólo para mayores de 18 años ", "Exclusivamente adultos: restringido a mayores de 18 años " });
-            cbdescripcion.Location = new Point(524, 391);
-            cbdescripcion.Name = "cbdescripcion";
-            cbdescripcion.Size = new Size(298, 28);
-            cbdescripcion.TabIndex = 12;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Todos los públicos pueden ver, aunque esta clasificación va dirigida a un público preescolar", "Apto para todo público, sugerido a mayores de 7 años", "Para mayores de 12 años, menores requieren supervisión", "Para mayores de 15 años, menores requieren supervisión", "Sólo para mayores de 18 años ", "Exclusivamente adultos: restringido a mayores de 18 años " });
+            comboBox2.Location = new Point(524, 391);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(298, 28);
+            comboBox2.TabIndex = 12;
             // 
-            // cbclave
+            // dateTimePickercreacion
             // 
-            cbclave.FormattingEnabled = true;
-            cbclave.Items.AddRange(new object[] { "AA", "A", "B", "B15", "C", "D" });
-            cbclave.Location = new Point(524, 345);
-            cbclave.Name = "cbclave";
-            cbclave.Size = new Size(151, 28);
-            cbclave.TabIndex = 13;
+            dateTimePickercreacion.Location = new Point(579, 400);
+            dateTimePickercreacion.Name = "dateTimePickercreacion";
+            dateTimePickercreacion.Size = new Size(250, 27);
+            dateTimePickercreacion.TabIndex = 10;
             // 
             // Clasificacion
             // 
@@ -173,8 +184,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(994, 574);
             Controls.Add(cbclave);
-            Controls.Add(cbdescripcion);
+            Controls.Add(comboBox2);
             Controls.Add(txtidClasificacion);
+            Controls.Add(lbfechaHoraCreacion);
             Controls.Add(lbdescripcion);
             Controls.Add(lbclave);
             Controls.Add(lbidClasificacion);
@@ -204,8 +216,9 @@
         private Label lbidClasificacion;
         private Label lbclave;
         private Label lbdescripcion;
+        private Label lbfechaHoraCreacion;
         private TextBox txtidClasificacion;
-        private ComboBox cbdescripcion;
+        private ComboBox comboBox2;
         private ComboBox cbclave;
     }
 }
