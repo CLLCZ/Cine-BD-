@@ -46,7 +46,6 @@
             cbclave = new ComboBox();
             txtclave = new TextBox();
             txtdescripcion = new TextBox();
-            dateTimePickercreacion = new DateTimePicker();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClasificacion).BeginInit();
             SuspendLayout();
@@ -171,13 +170,6 @@
             comboBox2.Size = new Size(298, 28);
             comboBox2.TabIndex = 12;
             // 
-            // dateTimePickercreacion
-            // 
-            dateTimePickercreacion.Location = new Point(579, 400);
-            dateTimePickercreacion.Name = "dateTimePickercreacion";
-            dateTimePickercreacion.Size = new Size(250, 27);
-            dateTimePickercreacion.TabIndex = 10;
-            // 
             // Clasificacion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -218,7 +210,10 @@
         private Label lbdescripcion;
         private Label lbfechaHoraCreacion;
         private TextBox txtidClasificacion;
+        private ComboBox cbdescripcion;
         private ComboBox comboBox2;
         private ComboBox cbclave;
+        private TextBox txtclave;
+        private TextBox txtdescripcion;
     }
 }
