@@ -41,7 +41,7 @@
             lbclave = new Label();
             lbdescripcion = new Label();
             txtidClasificacion = new TextBox();
-            comboBox2 = new ComboBox();
+            cbdescripcion = new ComboBox();
             cbclave = new ComboBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClasificacion).BeginInit();
@@ -149,14 +149,14 @@
             txtidClasificacion.Size = new Size(125, 27);
             txtidClasificacion.TabIndex = 7;
             // 
-            // comboBox2
+            // cbdescripcion
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Todos los públicos pueden ver, aunque esta clasificación va dirigida a un público preescolar", "Apto para todo público, sugerido a mayores de 7 años", "Para mayores de 12 años, menores requieren supervisión", "Para mayores de 15 años, menores requieren supervisión", "Sólo para mayores de 18 años ", "Exclusivamente adultos: restringido a mayores de 18 años " });
-            comboBox2.Location = new Point(524, 391);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(298, 28);
-            comboBox2.TabIndex = 12;
+            cbdescripcion.FormattingEnabled = true;
+            cbdescripcion.Items.AddRange(new object[] { "Todos los públicos pueden ver, aunque esta clasificación va dirigida a un público preescolar", "Apto para todo público, sugerido a mayores de 7 años", "Para mayores de 12 años, menores requieren supervisión", "Para mayores de 15 años, menores requieren supervisión", "Sólo para mayores de 18 años ", "Exclusivamente adultos: restringido a mayores de 18 años " });
+            cbdescripcion.Location = new Point(524, 391);
+            cbdescripcion.Name = "cbdescripcion";
+            cbdescripcion.Size = new Size(298, 28);
+            cbdescripcion.TabIndex = 12;
             // 
             // cbclave
             // 
@@ -173,7 +173,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(994, 574);
             Controls.Add(cbclave);
-            Controls.Add(comboBox2);
+            Controls.Add(cbdescripcion);
             Controls.Add(txtidClasificacion);
             Controls.Add(lbdescripcion);
             Controls.Add(lbclave);
@@ -205,7 +205,7 @@
         private Label lbclave;
         private Label lbdescripcion;
         private TextBox txtidClasificacion;
-        private ComboBox comboBox2;
+        private ComboBox cbdescripcion;
         private ComboBox cbclave;
     }
 }

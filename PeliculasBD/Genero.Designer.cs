@@ -42,7 +42,7 @@
             lbdescripcionGenero = new Label();
             txtidGenero = new TextBox();
             cbnombreGenero = new ComboBox();
-            comboBox2 = new ComboBox();
+            cbdescripciongenero = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvGenero).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -157,20 +157,20 @@
             cbnombreGenero.Size = new Size(151, 28);
             cbnombreGenero.TabIndex = 10;
             // 
-            // comboBox2
+            // cbdescripciongenero
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(489, 358);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(227, 28);
-            comboBox2.TabIndex = 11;
+            cbdescripciongenero.FormattingEnabled = true;
+            cbdescripciongenero.Location = new Point(489, 358);
+            cbdescripciongenero.Name = "cbdescripciongenero";
+            cbdescripciongenero.Size = new Size(227, 28);
+            cbdescripciongenero.TabIndex = 11;
             // 
             // Genero
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(comboBox2);
+            Controls.Add(cbdescripciongenero);
             Controls.Add(cbnombreGenero);
             Controls.Add(txtidGenero);
             Controls.Add(lbdescripcionGenero);
@@ -203,6 +203,6 @@
         private Label lbdescripcionGenero;
         private TextBox txtidGenero;
         private ComboBox cbnombreGenero;
-        private ComboBox comboBox2;
+        private ComboBox cbdescripciongenero;
     }
 }
