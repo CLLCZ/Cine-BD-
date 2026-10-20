@@ -43,6 +43,7 @@
             txtidGenero = new TextBox();
             cbnombreGenero = new ComboBox();
             cbdescripciongenero = new ComboBox();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvGenero).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -135,7 +136,7 @@
             // lbdescripcionGenero
             // 
             lbdescripcionGenero.AutoSize = true;
-            lbdescripcionGenero.Location = new Point(345, 318);
+            lbdescripcionGenero.Location = new Point(450, 315);
             lbdescripcionGenero.Name = "lbdescripcionGenero";
             lbdescripcionGenero.Size = new Size(167, 20);
             lbdescripcionGenero.TabIndex = 6;
@@ -157,20 +158,27 @@
             cbnombreGenero.Size = new Size(151, 28);
             cbnombreGenero.TabIndex = 10;
             // 
-            // comboBox2
+            // cbdescripciongenero
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(489, 358);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(227, 28);
-            comboBox2.TabIndex = 11;
+            cbdescripciongenero.Location = new Point(0, 0);
+            cbdescripciongenero.Name = "cbdescripciongenero";
+            cbdescripciongenero.Size = new Size(121, 28);
+            cbdescripciongenero.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(658, 317);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 11;
             // 
             // Genero
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(cbnombreGenero);
             Controls.Add(txtidGenero);
             Controls.Add(lbdescripcionGenero);
@@ -203,6 +211,8 @@
         private Label lbdescripcionGenero;
         private TextBox txtidGenero;
         private ComboBox cbnombreGenero;
+        private ComboBox cbdescripciongenero;
         private ComboBox comboBox2;
+        private ComboBox comboBox1;
     }
 }

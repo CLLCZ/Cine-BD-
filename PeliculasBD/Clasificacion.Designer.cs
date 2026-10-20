@@ -139,7 +139,7 @@
             // lbdescripcion
             // 
             lbdescripcion.AutoSize = true;
-            lbdescripcion.Location = new Point(468, 348);
+            lbdescripcion.Location = new Point(468, 352);
             lbdescripcion.Name = "lbdescripcion";
             lbdescripcion.Size = new Size(94, 20);
             lbdescripcion.TabIndex = 5;
@@ -161,22 +161,43 @@
             txtidClasificacion.Size = new Size(125, 27);
             txtidClasificacion.TabIndex = 7;
             // 
-            // comboBox2
+            // cbdescripcion
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Todos los públicos pueden ver, aunque esta clasificación va dirigida a un público preescolar", "Apto para todo público, sugerido a mayores de 7 años", "Para mayores de 12 años, menores requieren supervisión", "Para mayores de 15 años, menores requieren supervisión", "Sólo para mayores de 18 años ", "Exclusivamente adultos: restringido a mayores de 18 años " });
-            comboBox2.Location = new Point(524, 391);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(298, 28);
-            comboBox2.TabIndex = 12;
+            cbdescripcion.Items.AddRange(new object[] { "Todos los públicos pueden ver, aunque esta clasificación va dirigida a un público más preescolar", "Apto para todo público, sugerido a mayores de 7 años", "Para mayores de 12 años, menores requieren supervisión.", "Para mayores de 15 años, menores requieren supervisión", "Sólo para mayores de 18 años", "Exclusivamente adultos: restringido a mayores de 18 años." });
+            cbdescripcion.Location = new Point(568, 345);
+            cbdescripcion.Name = "cbdescripcion";
+            cbdescripcion.Size = new Size(275, 28);
+            cbdescripcion.TabIndex = 0;
+            // 
+            // cbclave
+            // 
+            cbclave.Items.AddRange(new object[] { "AA", "A", "B", "B15", "C", "D" });
+            cbclave.Location = new Point(163, 402);
+            cbclave.Name = "cbclave";
+            cbclave.Size = new Size(121, 28);
+            cbclave.TabIndex = 0;
+            // 
+            // txtclave
+            // 
+            txtclave.Location = new Point(0, 0);
+            txtclave.Name = "txtclave";
+            txtclave.Size = new Size(100, 27);
+            txtclave.TabIndex = 0;
+            // 
+            // txtdescripcion
+            // 
+            txtdescripcion.Location = new Point(0, 0);
+            txtdescripcion.Name = "txtdescripcion";
+            txtdescripcion.Size = new Size(100, 27);
+            txtdescripcion.TabIndex = 0;
             // 
             // Clasificacion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(994, 574);
+            Controls.Add(cbdescripcion);
             Controls.Add(cbclave);
-            Controls.Add(comboBox2);
             Controls.Add(txtidClasificacion);
             Controls.Add(lbfechaHoraCreacion);
             Controls.Add(lbdescripcion);
