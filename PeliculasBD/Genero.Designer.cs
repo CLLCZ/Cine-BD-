@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dgvGenero = new DataGridView();
             toolStrip1 = new ToolStrip();
             btnNuevo = new ToolStripLabel();
@@ -52,7 +54,23 @@
             // 
             dgvGenero.AllowUserToAddRows = false;
             dgvGenero.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvGenero.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvGenero.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvGenero.DefaultCellStyle = dataGridViewCellStyle2;
             dgvGenero.Location = new Point(35, 42);
             dgvGenero.Margin = new Padding(2);
             dgvGenero.Name = "dgvGenero";
@@ -118,7 +136,7 @@
             // lbidGenero
             // 
             lbidGenero.AutoSize = true;
-            lbidGenero.Location = new Point(64, 306);
+            lbidGenero.Location = new Point(86, 315);
             lbidGenero.Name = "lbidGenero";
             lbidGenero.Size = new Size(83, 20);
             lbidGenero.TabIndex = 4;
@@ -127,7 +145,7 @@
             // lbnombreGenero
             // 
             lbnombreGenero.AutoSize = true;
-            lbnombreGenero.Location = new Point(70, 366);
+            lbnombreGenero.Location = new Point(64, 366);
             lbnombreGenero.Name = "lbnombreGenero";
             lbnombreGenero.Size = new Size(148, 20);
             lbnombreGenero.TabIndex = 5;
@@ -136,7 +154,7 @@
             // lbdescripcionGenero
             // 
             lbdescripcionGenero.AutoSize = true;
-            lbdescripcionGenero.Location = new Point(450, 315);
+            lbdescripcionGenero.Location = new Point(408, 310);
             lbdescripcionGenero.Name = "lbdescripcionGenero";
             lbdescripcionGenero.Size = new Size(167, 20);
             lbdescripcionGenero.TabIndex = 6;
@@ -168,7 +186,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(658, 317);
+            comboBox1.Location = new Point(581, 310);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 11;

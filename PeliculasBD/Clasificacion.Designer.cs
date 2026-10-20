@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             toolStrip1 = new ToolStrip();
             btnNuevo = new ToolStripLabel();
             btnEditar = new ToolStripLabel();
@@ -46,6 +48,9 @@
             cbclave = new ComboBox();
             txtclave = new TextBox();
             txtdescripcion = new TextBox();
+            dateTimePickerFechaCreacion = new DateTimePicker();
+            checkedListBoxHora = new CheckedListBox();
+            checkedListBoxAMPM = new CheckedListBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClasificacion).BeginInit();
             SuspendLayout();
@@ -108,7 +113,23 @@
             // 
             dgvClasificacion.AllowUserToAddRows = false;
             dgvClasificacion.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvClasificacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvClasificacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvClasificacion.DefaultCellStyle = dataGridViewCellStyle4;
             dgvClasificacion.Location = new Point(36, 54);
             dgvClasificacion.Margin = new Padding(2);
             dgvClasificacion.Name = "dgvClasificacion";
@@ -174,7 +195,7 @@
             cbclave.Items.AddRange(new object[] { "AA", "A", "B", "B15", "C", "D" });
             cbclave.Location = new Point(163, 402);
             cbclave.Name = "cbclave";
-            cbclave.Size = new Size(121, 28);
+            cbclave.Size = new Size(181, 28);
             cbclave.TabIndex = 0;
             // 
             // txtclave
@@ -191,11 +212,39 @@
             txtdescripcion.Size = new Size(100, 27);
             txtdescripcion.TabIndex = 0;
             // 
+            // dateTimePickerFechaCreacion
+            // 
+            dateTimePickerFechaCreacion.Location = new Point(568, 403);
+            dateTimePickerFechaCreacion.Name = "dateTimePickerFechaCreacion";
+            dateTimePickerFechaCreacion.Size = new Size(297, 27);
+            dateTimePickerFechaCreacion.TabIndex = 8;
+            // 
+            // checkedListBoxHora
+            // 
+            checkedListBoxHora.FormattingEnabled = true;
+            checkedListBoxHora.Items.AddRange(new object[] { "1:00", "1:15", "1:30", "1:45", "2:00", "2:15", "2:30", "2:45", "3:00", "3:15", "3:30", "3:45", "4:00", "4:15", "4:30", "4:45", "5:00", "5:15", "5:30", "5:45", "6:00", "6:15", "6:30", "6:45", "7:00", "7:15", "7:30", "7:45", "8:00", "8:15", "8:30", "8:45", "9:00", "9:15", "9:30", "9:45", "10:00", "10:15", "10:30", "10:45", "11:00", "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45" });
+            checkedListBoxHora.Location = new Point(579, 448);
+            checkedListBoxHora.Name = "checkedListBoxHora";
+            checkedListBoxHora.Size = new Size(134, 114);
+            checkedListBoxHora.TabIndex = 9;
+            // 
+            // checkedListBoxAMPM
+            // 
+            checkedListBoxAMPM.FormattingEnabled = true;
+            checkedListBoxAMPM.Items.AddRange(new object[] { "AM", "PM" });
+            checkedListBoxAMPM.Location = new Point(737, 475);
+            checkedListBoxAMPM.Name = "checkedListBoxAMPM";
+            checkedListBoxAMPM.Size = new Size(128, 48);
+            checkedListBoxAMPM.TabIndex = 10;
+            // 
             // Clasificacion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(994, 574);
+            Controls.Add(checkedListBoxAMPM);
+            Controls.Add(checkedListBoxHora);
+            Controls.Add(dateTimePickerFechaCreacion);
             Controls.Add(cbdescripcion);
             Controls.Add(cbclave);
             Controls.Add(txtidClasificacion);
@@ -236,5 +285,8 @@
         private ComboBox cbclave;
         private TextBox txtclave;
         private TextBox txtdescripcion;
+        private DateTimePicker dateTimePickerFechaCreacion;
+        private CheckedListBox checkedListBoxHora;
+        private CheckedListBox checkedListBoxAMPM;
     }
 }
