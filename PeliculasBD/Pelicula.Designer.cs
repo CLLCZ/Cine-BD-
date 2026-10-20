@@ -56,13 +56,13 @@
             dgvpelicula.AllowUserToAddRows = false;
             dgvpelicula.AllowUserToDeleteRows = false;
             dgvpelicula.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvpelicula.Location = new Point(33, 45);
+            dgvpelicula.Location = new Point(41, 56);
             dgvpelicula.Margin = new Padding(2);
             dgvpelicula.Name = "dgvpelicula";
             dgvpelicula.ReadOnly = true;
             dgvpelicula.RowHeadersWidth = 62;
             dgvpelicula.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvpelicula.Size = new Size(736, 261);
+            dgvpelicula.Size = new Size(920, 326);
             dgvpelicula.TabIndex = 3;
             // 
             // toolStrip1
@@ -71,138 +71,151 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnNuevo, btnEditar, btnEliminar, btnGuardar, btnCancelar, btnObtener, btnSalir });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(1000, 30);
             toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStrip1";
             // 
             // btnNuevo
             // 
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(52, 22);
+            btnNuevo.Size = new Size(64, 25);
             btnNuevo.Text = "Nuevo";
             // 
             // btnEditar
             // 
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(48, 22);
+            btnEditar.Size = new Size(57, 25);
             btnEditar.Text = "Editar";
             // 
             // btnEliminar
             // 
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(63, 22);
+            btnEliminar.Size = new Size(74, 25);
             btnEliminar.Text = "Eliminar";
             // 
             // btnGuardar
             // 
+            btnGuardar.Enabled = false;
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(62, 22);
+            btnGuardar.Size = new Size(75, 25);
             btnGuardar.Text = "Guardar";
             // 
             // btnCancelar
             // 
+            btnCancelar.Enabled = false;
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(66, 22);
+            btnCancelar.Size = new Size(78, 25);
             btnCancelar.Text = "Cancelar";
             // 
             // btnObtener
             // 
             btnObtener.Name = "btnObtener";
-            btnObtener.Size = new Size(106, 22);
+            btnObtener.Size = new Size(129, 25);
             btnObtener.Text = "Obtener Datos";
             // 
             // btnSalir
             // 
             btnSalir.Alignment = ToolStripItemAlignment.Right;
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(38, 22);
+            btnSalir.Size = new Size(45, 25);
             btnSalir.Text = "Salir";
+            btnSalir.Click += btnSalir_Click;
             // 
             // lbidGenero
             // 
             lbidGenero.AutoSize = true;
-            lbidGenero.Location = new Point(434, 338);
+            lbidGenero.Location = new Point(542, 422);
+            lbidGenero.Margin = new Padding(4, 0, 4, 0);
             lbidGenero.Name = "lbidGenero";
-            lbidGenero.Size = new Size(79, 20);
+            lbidGenero.Size = new Size(96, 25);
             lbidGenero.TabIndex = 9;
             lbidGenero.Text = "ID Género:";
             // 
             // lbduracion
             // 
             lbduracion.AutoSize = true;
-            lbduracion.Location = new Point(89, 428);
+            lbduracion.Location = new Point(111, 535);
+            lbduracion.Margin = new Padding(4, 0, 4, 0);
             lbduracion.Name = "lbduracion";
-            lbduracion.Size = new Size(76, 20);
+            lbduracion.Size = new Size(92, 25);
             lbduracion.TabIndex = 8;
             lbduracion.Text = "Duración: ";
             // 
             // lbnombrePelicula
             // 
             lbnombrePelicula.AutoSize = true;
-            lbnombrePelicula.Location = new Point(89, 382);
+            lbnombrePelicula.Location = new Point(111, 478);
+            lbnombrePelicula.Margin = new Padding(4, 0, 4, 0);
             lbnombrePelicula.Name = "lbnombrePelicula";
-            lbnombrePelicula.Size = new Size(125, 20);
+            lbnombrePelicula.Size = new Size(149, 25);
             lbnombrePelicula.TabIndex = 7;
             lbnombrePelicula.Text = "Nombre Pelicula: ";
             // 
             // lbidPelicula
             // 
             lbidPelicula.AutoSize = true;
-            lbidPelicula.Location = new Point(89, 338);
+            lbidPelicula.Location = new Point(111, 422);
+            lbidPelicula.Margin = new Padding(4, 0, 4, 0);
             lbidPelicula.Name = "lbidPelicula";
-            lbidPelicula.Size = new Size(85, 20);
+            lbidPelicula.Size = new Size(101, 25);
             lbidPelicula.TabIndex = 6;
             lbidPelicula.Text = "ID Pelicula: ";
             // 
             // lbidClasificacion
             // 
             lbidClasificacion.AutoSize = true;
-            lbidClasificacion.Location = new Point(434, 395);
+            lbidClasificacion.Location = new Point(542, 494);
+            lbidClasificacion.Margin = new Padding(4, 0, 4, 0);
             lbidClasificacion.Name = "lbidClasificacion";
-            lbidClasificacion.Size = new Size(114, 20);
+            lbidClasificacion.Size = new Size(135, 25);
             lbidClasificacion.TabIndex = 10;
             lbidClasificacion.Text = "ID Clasificación:";
             // 
             // txtidPelicula
             // 
-            txtidPelicula.Location = new Point(220, 335);
+            txtidPelicula.Location = new Point(275, 419);
+            txtidPelicula.Margin = new Padding(4);
             txtidPelicula.Name = "txtidPelicula";
-            txtidPelicula.Size = new Size(125, 27);
+            txtidPelicula.Size = new Size(155, 31);
             txtidPelicula.TabIndex = 11;
             // 
             // txtnombrePelicula
             // 
-            txtnombrePelicula.Location = new Point(220, 379);
+            txtnombrePelicula.Location = new Point(275, 474);
+            txtnombrePelicula.Margin = new Padding(4);
             txtnombrePelicula.Name = "txtnombrePelicula";
-            txtnombrePelicula.Size = new Size(125, 27);
+            txtnombrePelicula.Size = new Size(155, 31);
             txtnombrePelicula.TabIndex = 12;
             // 
             // txtduracion
             // 
-            txtduracion.Location = new Point(220, 425);
+            txtduracion.Location = new Point(275, 531);
+            txtduracion.Margin = new Padding(4);
             txtduracion.Name = "txtduracion";
-            txtduracion.Size = new Size(125, 27);
+            txtduracion.Size = new Size(155, 31);
             txtduracion.TabIndex = 13;
             // 
             // txtidGenero
             // 
-            txtidGenero.Location = new Point(557, 335);
+            txtidGenero.Location = new Point(696, 419);
+            txtidGenero.Margin = new Padding(4);
             txtidGenero.Name = "txtidGenero";
-            txtidGenero.Size = new Size(125, 27);
+            txtidGenero.Size = new Size(155, 31);
             txtidGenero.TabIndex = 14;
             // 
             // txtidClasificacion
             // 
-            txtidClasificacion.Location = new Point(557, 392);
+            txtidClasificacion.Location = new Point(696, 490);
+            txtidClasificacion.Margin = new Padding(4);
             txtidClasificacion.Name = "txtidClasificacion";
-            txtidClasificacion.Size = new Size(125, 27);
+            txtidClasificacion.Size = new Size(155, 31);
             txtidClasificacion.TabIndex = 15;
             // 
             // Pelicula
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 562);
+            ClientSize = new Size(1000, 702);
             Controls.Add(txtidClasificacion);
             Controls.Add(txtidGenero);
             Controls.Add(txtduracion);
@@ -215,6 +228,7 @@
             Controls.Add(lbidPelicula);
             Controls.Add(dgvpelicula);
             Controls.Add(toolStrip1);
+            Margin = new Padding(4);
             Name = "Pelicula";
             Text = "Pelicula";
             ((System.ComponentModel.ISupportInitialize)dgvpelicula).EndInit();

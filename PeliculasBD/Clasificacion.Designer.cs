@@ -40,12 +40,12 @@
             lbidClasificacion = new Label();
             lbclave = new Label();
             lbdescripcion = new Label();
-            lbfechaHoraCreacion = new Label();
             txtidClasificacion = new TextBox();
             cbdescripcion = new ComboBox();
-            cbclave = new ComboBox();
             txtclave = new TextBox();
             txtdescripcion = new TextBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClasificacion).BeginInit();
             SuspendLayout();
@@ -56,51 +56,55 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnNuevo, btnEditar, btnEliminar, btnGuardar, btnCancelar, btnObtener, btnSalir });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(994, 25);
+            toolStrip1.Size = new Size(1248, 30);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
             // btnNuevo
             // 
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(52, 22);
+            btnNuevo.Size = new Size(64, 25);
             btnNuevo.Text = "Nuevo";
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnEditar
             // 
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(48, 22);
+            btnEditar.Size = new Size(57, 25);
             btnEditar.Text = "Editar";
             // 
             // btnEliminar
             // 
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(63, 22);
+            btnEliminar.Size = new Size(74, 25);
             btnEliminar.Text = "Eliminar";
             // 
             // btnGuardar
             // 
+            btnGuardar.Enabled = false;
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(62, 22);
+            btnGuardar.Size = new Size(75, 25);
             btnGuardar.Text = "Guardar";
             // 
             // btnCancelar
             // 
+            btnCancelar.Enabled = false;
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(66, 22);
+            btnCancelar.Size = new Size(78, 25);
             btnCancelar.Text = "Cancelar";
             // 
             // btnObtener
             // 
             btnObtener.Name = "btnObtener";
-            btnObtener.Size = new Size(106, 22);
+            btnObtener.Size = new Size(129, 25);
             btnObtener.Text = "Obtener Datos";
+            btnObtener.Click += btnObtener_Click;
             // 
             // btnSalir
             // 
             btnSalir.Alignment = ToolStripItemAlignment.Right;
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(38, 22);
+            btnSalir.Size = new Size(45, 25);
             btnSalir.Text = "Salir";
             btnSalir.Click += btnSalir_Click;
             // 
@@ -109,76 +113,101 @@
             dgvClasificacion.AllowUserToAddRows = false;
             dgvClasificacion.AllowUserToDeleteRows = false;
             dgvClasificacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClasificacion.Location = new Point(36, 54);
+            dgvClasificacion.Location = new Point(45, 68);
             dgvClasificacion.Margin = new Padding(2);
             dgvClasificacion.Name = "dgvClasificacion";
             dgvClasificacion.ReadOnly = true;
             dgvClasificacion.RowHeadersWidth = 62;
             dgvClasificacion.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvClasificacion.Size = new Size(921, 251);
+            dgvClasificacion.Size = new Size(1151, 314);
             dgvClasificacion.TabIndex = 1;
+            dgvClasificacion.SelectionChanged += dgvClasificacion_SelectionChanged;
             // 
             // lbidClasificacion
             // 
             lbidClasificacion.AutoSize = true;
-            lbidClasificacion.Location = new Point(95, 348);
+            lbidClasificacion.Location = new Point(119, 435);
+            lbidClasificacion.Margin = new Padding(4, 0, 4, 0);
             lbidClasificacion.Name = "lbidClasificacion";
-            lbidClasificacion.Size = new Size(118, 20);
+            lbidClasificacion.Size = new Size(140, 25);
             lbidClasificacion.TabIndex = 2;
             lbidClasificacion.Text = "ID Clasificación: ";
             // 
             // lbclave
             // 
             lbclave.AutoSize = true;
-            lbclave.Location = new Point(95, 405);
+            lbclave.Location = new Point(196, 506);
+            lbclave.Margin = new Padding(4, 0, 4, 0);
             lbclave.Name = "lbclave";
-            lbclave.Size = new Size(52, 20);
+            lbclave.Size = new Size(63, 25);
             lbclave.TabIndex = 3;
             lbclave.Text = "Clave: ";
             // 
             // lbdescripcion
             // 
             lbdescripcion.AutoSize = true;
-            lbdescripcion.Location = new Point(468, 348);
+            lbdescripcion.Location = new Point(585, 435);
+            lbdescripcion.Margin = new Padding(4, 0, 4, 0);
             lbdescripcion.Name = "lbdescripcion";
-            lbdescripcion.Size = new Size(94, 20);
+            lbdescripcion.Size = new Size(113, 25);
             lbdescripcion.TabIndex = 5;
             lbdescripcion.Text = "Descripción: ";
             // 
-            // lbfechaHoraCreacion
-            // 
-            lbfechaHoraCreacion.AutoSize = true;
-            lbfechaHoraCreacion.Location = new Point(364, 403);
-            lbfechaHoraCreacion.Name = "lbfechaHoraCreacion";
-            lbfechaHoraCreacion.Size = new Size(198, 20);
-            lbfechaHoraCreacion.TabIndex = 6;
-            lbfechaHoraCreacion.Text = "Fecha y hora de la Creación: ";
-            // 
             // txtidClasificacion
             // 
-            txtidClasificacion.Location = new Point(219, 345);
+            txtidClasificacion.Location = new Point(274, 431);
+            txtidClasificacion.Margin = new Padding(4);
             txtidClasificacion.Name = "txtidClasificacion";
-            txtidClasificacion.Size = new Size(125, 27);
+            txtidClasificacion.ReadOnly = true;
+            txtidClasificacion.Size = new Size(155, 31);
             txtidClasificacion.TabIndex = 7;
             // 
-            // comboBox2
+            // cbdescripcion
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Todos los públicos pueden ver, aunque esta clasificación va dirigida a un público preescolar", "Apto para todo público, sugerido a mayores de 7 años", "Para mayores de 12 años, menores requieren supervisión", "Para mayores de 15 años, menores requieren supervisión", "Sólo para mayores de 18 años ", "Exclusivamente adultos: restringido a mayores de 18 años " });
-            comboBox2.Location = new Point(524, 391);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(298, 28);
-            comboBox2.TabIndex = 12;
+            cbdescripcion.Location = new Point(0, 0);
+            cbdescripcion.Name = "cbdescripcion";
+            cbdescripcion.Size = new Size(121, 33);
+            cbdescripcion.TabIndex = 0;
+            // 
+            // txtclave
+            // 
+            txtclave.Location = new Point(0, 0);
+            txtclave.Name = "txtclave";
+            txtclave.Size = new Size(100, 31);
+            txtclave.TabIndex = 0;
+            // 
+            // txtdescripcion
+            // 
+            txtdescripcion.Location = new Point(0, 0);
+            txtdescripcion.Name = "txtdescripcion";
+            txtdescripcion.Size = new Size(100, 31);
+            txtdescripcion.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.Enabled = false;
+            textBox1.Location = new Point(274, 500);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(150, 31);
+            textBox1.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            textBox2.Enabled = false;
+            textBox2.Location = new Point(585, 463);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(395, 92);
+            textBox2.TabIndex = 9;
             // 
             // Clasificacion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(994, 574);
-            Controls.Add(cbclave);
-            Controls.Add(comboBox2);
+            ClientSize = new Size(1248, 601);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Controls.Add(txtidClasificacion);
-            Controls.Add(lbfechaHoraCreacion);
             Controls.Add(lbdescripcion);
             Controls.Add(lbclave);
             Controls.Add(lbidClasificacion);
@@ -208,12 +237,12 @@
         private Label lbidClasificacion;
         private Label lbclave;
         private Label lbdescripcion;
-        private Label lbfechaHoraCreacion;
         private TextBox txtidClasificacion;
         private ComboBox cbdescripcion;
         private ComboBox comboBox2;
-        private ComboBox cbclave;
         private TextBox txtclave;
         private TextBox txtdescripcion;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }
