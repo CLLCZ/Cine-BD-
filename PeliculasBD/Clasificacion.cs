@@ -87,6 +87,9 @@ namespace PeliculasBD
                     {
 
                     }
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("Excepción: " + ex.Message);
                 }
             }
         }
