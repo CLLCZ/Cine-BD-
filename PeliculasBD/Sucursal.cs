@@ -8,20 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CineConBD;
 namespace PeliculasBD
 {
     public partial class Sucursal : Form
     {
         private bool Editar = false;
-        private String conexion = "";
-        private SqlConnection sqlConn = null;
+        
         public Sucursal()
         {
             InitializeComponent();
-            conexion = "Server=localhost\\SQLExpress;Database=Cine;Trusted_Connection=True;"
-                     + "Integrated Security=true; TrustServerCertificate=true";
-            sqlConn = new SqlConnection(conexion);
+            
             ObtenerDatos();
             llenarComboCiudad();
         }
@@ -30,7 +27,7 @@ namespace PeliculasBD
         {
             try
             {
-                using (SqlConnection sqlConn = new SqlConnection(conexion))
+                using (SqlConnection sqlConn = Conexion.ObtenerConexion())
                 {
                     sqlConn.Open();
                     string consulta = "SELECT S.IDSucursal, S.Nombre,S.Direccion,S.IDCiudad,C.NombreCiudad "
@@ -55,7 +52,7 @@ namespace PeliculasBD
         {
             try
             {
-                using (SqlConnection sqlConn = new SqlConnection(conexion))
+                using (SqlConnection sqlConn = Conexion.ObtenerConexion())
                 {
                     sqlConn.Open();
                     string consulta = "SELECT IDCiudad, NombreCiudad FROM Cine.dbo.Ciudad";
@@ -124,7 +121,7 @@ namespace PeliculasBD
                 {
                     try
                     {
-                        using (SqlConnection sqlConn = new SqlConnection(conexion))
+                        using (SqlConnection sqlConn = Conexion.ObtenerConexion())
                         {
                             sqlConn.Open();
                             string consulta = "DELETE FROM Cine.dbo.Sucursal WHERE IDSucursal = @IDSucursal";
@@ -156,7 +153,7 @@ namespace PeliculasBD
             {
                 try
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(conexion))
+                    using (SqlConnection sqlConn = Conexion.ObtenerConexion())
                     {
                         sqlConn.Open();
                         string insertar = "INSERT INTO Cine.dbo.Sucursal (Nombre, Direccion, IDCiudad) VALUES (@Nombre, @Direccion, @IDCiudad)";
@@ -181,7 +178,7 @@ namespace PeliculasBD
             {
                 try
                 {
-                    using (SqlConnection sqlConn = new SqlConnection(conexion))
+                    using (SqlConnection sqlConn = Conexion.ObtenerConexion())
                     {
                         sqlConn.Open();
                         string actualizar = "UPDATE Cine.dbo.Sucursal SET Nombre = @Nombre, Direccion = @Direccion, IDCiudad = @IDCiudad WHERE IDSucursal = @IDSucursal";

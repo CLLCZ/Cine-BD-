@@ -127,3 +127,6 @@ C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\
 C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\PeliculasBD.genruntimeconfig.cache
 C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\ref\PeliculasBD.dll
 C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\PeliculasBD.Sucursal.resources
+C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\bin\Debug\net8.0-windows\PeliculasBD.dll.config
+C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
