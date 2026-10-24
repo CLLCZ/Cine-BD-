@@ -44,13 +44,11 @@
             lbdescripcion = new Label();
             lbfechaHoraCreacion = new Label();
             txtidClasificacion = new TextBox();
-            cbdescripcion = new ComboBox();
-            cbclave = new ComboBox();
             txtclave = new TextBox();
             txtdescripcion = new TextBox();
             dateTimePickerFechaCreacion = new DateTimePicker();
-            checkedListBoxHora = new CheckedListBox();
-            checkedListBoxAMPM = new CheckedListBox();
+            txtClaveClasif = new TextBox();
+            txtDescrip = new TextBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClasificacion).BeginInit();
             SuspendLayout();
@@ -61,51 +59,59 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnNuevo, btnEditar, btnEliminar, btnGuardar, btnCancelar, btnObtener, btnSalir });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(994, 25);
+            toolStrip1.Size = new Size(1242, 30);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
             // btnNuevo
             // 
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(52, 22);
+            btnNuevo.Size = new Size(64, 25);
             btnNuevo.Text = "Nuevo";
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnEditar
             // 
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(48, 22);
+            btnEditar.Size = new Size(57, 25);
             btnEditar.Text = "Editar";
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnEliminar
             // 
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(63, 22);
+            btnEliminar.Size = new Size(74, 25);
             btnEliminar.Text = "Eliminar";
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
+            btnGuardar.Enabled = false;
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(62, 22);
+            btnGuardar.Size = new Size(75, 25);
             btnGuardar.Text = "Guardar";
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCancelar
             // 
+            btnCancelar.Enabled = false;
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(66, 22);
+            btnCancelar.Size = new Size(78, 25);
             btnCancelar.Text = "Cancelar";
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnObtener
             // 
             btnObtener.Name = "btnObtener";
-            btnObtener.Size = new Size(106, 22);
+            btnObtener.Size = new Size(129, 25);
             btnObtener.Text = "Obtener Datos";
+            btnObtener.Click += btnObtener_Click;
             // 
             // btnSalir
             // 
             btnSalir.Alignment = ToolStripItemAlignment.Right;
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(38, 22);
+            btnSalir.Size = new Size(45, 25);
             btnSalir.Text = "Salir";
             btnSalir.Click += btnSalir_Click;
             // 
@@ -130,123 +136,112 @@
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dgvClasificacion.DefaultCellStyle = dataGridViewCellStyle4;
-            dgvClasificacion.Location = new Point(36, 54);
+            dgvClasificacion.Location = new Point(45, 68);
             dgvClasificacion.Margin = new Padding(2);
             dgvClasificacion.Name = "dgvClasificacion";
             dgvClasificacion.ReadOnly = true;
             dgvClasificacion.RowHeadersWidth = 62;
             dgvClasificacion.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvClasificacion.Size = new Size(921, 251);
+            dgvClasificacion.Size = new Size(1151, 314);
             dgvClasificacion.TabIndex = 1;
+            dgvClasificacion.SelectionChanged += dgvClasificacion_SelectionChanged;
             // 
             // lbidClasificacion
             // 
             lbidClasificacion.AutoSize = true;
-            lbidClasificacion.Location = new Point(95, 348);
+            lbidClasificacion.Location = new Point(119, 435);
+            lbidClasificacion.Margin = new Padding(4, 0, 4, 0);
             lbidClasificacion.Name = "lbidClasificacion";
-            lbidClasificacion.Size = new Size(118, 20);
+            lbidClasificacion.Size = new Size(140, 25);
             lbidClasificacion.TabIndex = 2;
             lbidClasificacion.Text = "ID Clasificación: ";
             // 
             // lbclave
             // 
             lbclave.AutoSize = true;
-            lbclave.Location = new Point(95, 405);
+            lbclave.Location = new Point(196, 504);
+            lbclave.Margin = new Padding(4, 0, 4, 0);
             lbclave.Name = "lbclave";
-            lbclave.Size = new Size(52, 20);
+            lbclave.Size = new Size(63, 25);
             lbclave.TabIndex = 3;
             lbclave.Text = "Clave: ";
             // 
             // lbdescripcion
             // 
             lbdescripcion.AutoSize = true;
-            lbdescripcion.Location = new Point(468, 352);
+            lbdescripcion.Location = new Point(585, 440);
+            lbdescripcion.Margin = new Padding(4, 0, 4, 0);
             lbdescripcion.Name = "lbdescripcion";
-            lbdescripcion.Size = new Size(94, 20);
+            lbdescripcion.Size = new Size(113, 25);
             lbdescripcion.TabIndex = 5;
             lbdescripcion.Text = "Descripción: ";
             // 
             // lbfechaHoraCreacion
             // 
             lbfechaHoraCreacion.AutoSize = true;
-            lbfechaHoraCreacion.Location = new Point(364, 403);
+            lbfechaHoraCreacion.Location = new Point(455, 504);
+            lbfechaHoraCreacion.Margin = new Padding(4, 0, 4, 0);
             lbfechaHoraCreacion.Name = "lbfechaHoraCreacion";
-            lbfechaHoraCreacion.Size = new Size(198, 20);
+            lbfechaHoraCreacion.Size = new Size(237, 25);
             lbfechaHoraCreacion.TabIndex = 6;
             lbfechaHoraCreacion.Text = "Fecha y hora de la Creación: ";
             // 
             // txtidClasificacion
             // 
-            txtidClasificacion.Location = new Point(219, 345);
+            txtidClasificacion.Location = new Point(274, 431);
+            txtidClasificacion.Margin = new Padding(4);
             txtidClasificacion.Name = "txtidClasificacion";
-            txtidClasificacion.Size = new Size(125, 27);
+            txtidClasificacion.ReadOnly = true;
+            txtidClasificacion.Size = new Size(155, 31);
             txtidClasificacion.TabIndex = 7;
-            // 
-            // cbdescripcion
-            // 
-            cbdescripcion.Items.AddRange(new object[] { "Todos los públicos pueden ver, aunque esta clasificación va dirigida a un público más preescolar", "Apto para todo público, sugerido a mayores de 7 años", "Para mayores de 12 años, menores requieren supervisión.", "Para mayores de 15 años, menores requieren supervisión", "Sólo para mayores de 18 años", "Exclusivamente adultos: restringido a mayores de 18 años." });
-            cbdescripcion.Location = new Point(568, 345);
-            cbdescripcion.Name = "cbdescripcion";
-            cbdescripcion.Size = new Size(275, 28);
-            cbdescripcion.TabIndex = 0;
-            // 
-            // cbclave
-            // 
-            cbclave.Items.AddRange(new object[] { "AA", "A", "B", "B15", "C", "D" });
-            cbclave.Location = new Point(163, 402);
-            cbclave.Name = "cbclave";
-            cbclave.Size = new Size(181, 28);
-            cbclave.TabIndex = 0;
             // 
             // txtclave
             // 
             txtclave.Location = new Point(0, 0);
             txtclave.Name = "txtclave";
-            txtclave.Size = new Size(100, 27);
+            txtclave.Size = new Size(100, 31);
             txtclave.TabIndex = 0;
             // 
             // txtdescripcion
             // 
             txtdescripcion.Location = new Point(0, 0);
             txtdescripcion.Name = "txtdescripcion";
-            txtdescripcion.Size = new Size(100, 27);
+            txtdescripcion.Size = new Size(100, 31);
             txtdescripcion.TabIndex = 0;
             // 
             // dateTimePickerFechaCreacion
             // 
-            dateTimePickerFechaCreacion.Location = new Point(568, 403);
+            dateTimePickerFechaCreacion.Enabled = false;
+            dateTimePickerFechaCreacion.Location = new Point(710, 504);
+            dateTimePickerFechaCreacion.Margin = new Padding(4);
             dateTimePickerFechaCreacion.Name = "dateTimePickerFechaCreacion";
-            dateTimePickerFechaCreacion.Size = new Size(297, 27);
+            dateTimePickerFechaCreacion.Size = new Size(370, 31);
             dateTimePickerFechaCreacion.TabIndex = 8;
             // 
-            // checkedListBoxHora
+            // txtClaveClasif
             // 
-            checkedListBoxHora.FormattingEnabled = true;
-            checkedListBoxHora.Items.AddRange(new object[] { "1:00", "1:15", "1:30", "1:45", "2:00", "2:15", "2:30", "2:45", "3:00", "3:15", "3:30", "3:45", "4:00", "4:15", "4:30", "4:45", "5:00", "5:15", "5:30", "5:45", "6:00", "6:15", "6:30", "6:45", "7:00", "7:15", "7:30", "7:45", "8:00", "8:15", "8:30", "8:45", "9:00", "9:15", "9:30", "9:45", "10:00", "10:15", "10:30", "10:45", "11:00", "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45" });
-            checkedListBoxHora.Location = new Point(579, 448);
-            checkedListBoxHora.Name = "checkedListBoxHora";
-            checkedListBoxHora.Size = new Size(134, 114);
-            checkedListBoxHora.TabIndex = 9;
+            txtClaveClasif.Enabled = false;
+            txtClaveClasif.Location = new Point(279, 503);
+            txtClaveClasif.Name = "txtClaveClasif";
+            txtClaveClasif.Size = new Size(150, 31);
+            txtClaveClasif.TabIndex = 11;
             // 
-            // checkedListBoxAMPM
+            // txtDescrip
             // 
-            checkedListBoxAMPM.FormattingEnabled = true;
-            checkedListBoxAMPM.Items.AddRange(new object[] { "AM", "PM" });
-            checkedListBoxAMPM.Location = new Point(737, 475);
-            checkedListBoxAMPM.Name = "checkedListBoxAMPM";
-            checkedListBoxAMPM.Size = new Size(128, 48);
-            checkedListBoxAMPM.TabIndex = 10;
+            txtDescrip.Enabled = false;
+            txtDescrip.Location = new Point(710, 440);
+            txtDescrip.Name = "txtDescrip";
+            txtDescrip.Size = new Size(370, 31);
+            txtDescrip.TabIndex = 12;
             // 
             // Clasificacion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(994, 574);
-            Controls.Add(checkedListBoxAMPM);
-            Controls.Add(checkedListBoxHora);
+            ClientSize = new Size(1242, 718);
+            Controls.Add(txtDescrip);
+            Controls.Add(txtClaveClasif);
             Controls.Add(dateTimePickerFechaCreacion);
-            Controls.Add(cbdescripcion);
-            Controls.Add(cbclave);
             Controls.Add(txtidClasificacion);
             Controls.Add(lbfechaHoraCreacion);
             Controls.Add(lbdescripcion);
@@ -280,13 +275,11 @@
         private Label lbdescripcion;
         private Label lbfechaHoraCreacion;
         private TextBox txtidClasificacion;
-        private ComboBox cbdescripcion;
         private ComboBox comboBox2;
-        private ComboBox cbclave;
         private TextBox txtclave;
         private TextBox txtdescripcion;
         private DateTimePicker dateTimePickerFechaCreacion;
-        private CheckedListBox checkedListBoxHora;
-        private CheckedListBox checkedListBoxAMPM;
+        private TextBox txtClaveClasif;
+        private TextBox txtDescrip;
     }
 }
