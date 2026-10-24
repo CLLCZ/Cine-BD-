@@ -33,15 +33,16 @@
             peliculaToolStripMenuItem = new ToolStripMenuItem();
             generoToolStripMenuItem = new ToolStripMenuItem();
             clasificacionToolStripMenuItem = new ToolStripMenuItem();
+            tipoBoletoToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             funciónToolStripMenuItem = new ToolStripMenuItem();
             salaToolStripMenuItem = new ToolStripMenuItem();
             sucursalToolStripMenuItem = new ToolStripMenuItem();
-            ciudadYEstadoToolStripMenuItem = new ToolStripMenuItem();
+            EstadoToolStripMenuItem = new ToolStripMenuItem();
+            ciudadToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem2 = new ToolStripMenuItem();
             ventaToolStripMenuItem = new ToolStripMenuItem();
             clienteToolStripMenuItem = new ToolStripMenuItem();
-            tipoDeBoletoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             // tsmenuitemcatalogo
             // 
-            tsmenuitemcatalogo.DropDownItems.AddRange(new ToolStripItem[] { peliculaToolStripMenuItem, generoToolStripMenuItem, clasificacionToolStripMenuItem });
+            tsmenuitemcatalogo.DropDownItems.AddRange(new ToolStripItem[] { peliculaToolStripMenuItem, generoToolStripMenuItem, clasificacionToolStripMenuItem, tipoBoletoToolStripMenuItem });
             tsmenuitemcatalogo.Name = "tsmenuitemcatalogo";
             tsmenuitemcatalogo.Size = new Size(100, 29);
             tsmenuitemcatalogo.Text = "Catálogo";
@@ -83,9 +84,16 @@
             clasificacionToolStripMenuItem.Text = "Clasificación";
             clasificacionToolStripMenuItem.Click += clasificacionToolStripMenuItem_Click;
             // 
+            // tipoBoletoToolStripMenuItem
+            // 
+            tipoBoletoToolStripMenuItem.Name = "tipoBoletoToolStripMenuItem";
+            tipoBoletoToolStripMenuItem.Size = new Size(270, 34);
+            tipoBoletoToolStripMenuItem.Text = "Tipo Boleto";
+            tipoBoletoToolStripMenuItem.Click += tipoBoletoToolStripMenuItem_Click;
+            // 
             // toolStripMenuItem1
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { funciónToolStripMenuItem, salaToolStripMenuItem, sucursalToolStripMenuItem, ciudadYEstadoToolStripMenuItem });
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { funciónToolStripMenuItem, salaToolStripMenuItem, sucursalToolStripMenuItem, EstadoToolStripMenuItem });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(62, 29);
             toolStripMenuItem1.Text = "Cine";
@@ -101,6 +109,7 @@
             salaToolStripMenuItem.Name = "salaToolStripMenuItem";
             salaToolStripMenuItem.Size = new Size(270, 34);
             salaToolStripMenuItem.Text = "Sala";
+            salaToolStripMenuItem.Click += salaToolStripMenuItem_Click;
             // 
             // sucursalToolStripMenuItem
             // 
@@ -109,15 +118,24 @@
             sucursalToolStripMenuItem.Text = "Sucursal";
             sucursalToolStripMenuItem.Click += sucursalToolStripMenuItem_Click;
             // 
-            // ciudadYEstadoToolStripMenuItem
+            // EstadoToolStripMenuItem
             // 
-            ciudadYEstadoToolStripMenuItem.Name = "ciudadYEstadoToolStripMenuItem";
-            ciudadYEstadoToolStripMenuItem.Size = new Size(270, 34);
-            ciudadYEstadoToolStripMenuItem.Text = "Ciudad y Estado";
+            EstadoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ciudadToolStripMenuItem });
+            EstadoToolStripMenuItem.Name = "EstadoToolStripMenuItem";
+            EstadoToolStripMenuItem.Size = new Size(270, 34);
+            EstadoToolStripMenuItem.Text = "Estado";
+            EstadoToolStripMenuItem.Click += EstadoToolStripMenuItem_Click;
+            // 
+            // ciudadToolStripMenuItem
+            // 
+            ciudadToolStripMenuItem.Name = "ciudadToolStripMenuItem";
+            ciudadToolStripMenuItem.Size = new Size(170, 34);
+            ciudadToolStripMenuItem.Text = "Ciudad";
+            ciudadToolStripMenuItem.Click += ciudadToolStripMenuItem_Click;
             // 
             // toolStripMenuItem2
             // 
-            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { ventaToolStripMenuItem, clienteToolStripMenuItem, tipoDeBoletoToolStripMenuItem });
+            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { ventaToolStripMenuItem, clienteToolStripMenuItem });
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Size = new Size(190, 29);
             toolStripMenuItem2.Text = "Información Clientes";
@@ -125,20 +143,15 @@
             // ventaToolStripMenuItem
             // 
             ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            ventaToolStripMenuItem.Size = new Size(270, 34);
+            ventaToolStripMenuItem.Size = new Size(167, 34);
             ventaToolStripMenuItem.Text = "Venta";
             // 
             // clienteToolStripMenuItem
             // 
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            clienteToolStripMenuItem.Size = new Size(270, 34);
+            clienteToolStripMenuItem.Size = new Size(167, 34);
             clienteToolStripMenuItem.Text = "Cliente";
-            // 
-            // tipoDeBoletoToolStripMenuItem
-            // 
-            tipoDeBoletoToolStripMenuItem.Name = "tipoDeBoletoToolStripMenuItem";
-            tipoDeBoletoToolStripMenuItem.Size = new Size(270, 34);
-            tipoDeBoletoToolStripMenuItem.Text = "Tipo de Boleto";
+            clienteToolStripMenuItem.Click += clienteToolStripMenuItem_Click;
             // 
             // VentanaPrincipal
             // 
@@ -167,10 +180,11 @@
         private ToolStripMenuItem funciónToolStripMenuItem;
         private ToolStripMenuItem salaToolStripMenuItem;
         private ToolStripMenuItem sucursalToolStripMenuItem;
-        private ToolStripMenuItem ciudadYEstadoToolStripMenuItem;
+        private ToolStripMenuItem EstadoToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem ventaToolStripMenuItem;
         private ToolStripMenuItem clienteToolStripMenuItem;
-        private ToolStripMenuItem tipoDeBoletoToolStripMenuItem;
+        private ToolStripMenuItem ciudadToolStripMenuItem;
+        private ToolStripMenuItem tipoBoletoToolStripMenuItem;
     }
 }

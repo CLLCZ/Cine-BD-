@@ -30,5 +30,35 @@ namespace PeliculasBD
             Sucursal sucursalVentana = new Sucursal();
             sucursalVentana.Show();
         }
+
+        private void ciudadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ciudad ciudadVentana = new Ciudad();
+            ciudadVentana.Show();
+        }
+
+        private void EstadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Estado estadoVentana = new Estado();
+            estadoVentana.Show();
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cliente clienteVentana = new Cliente();
+            clienteVentana.Show();
+        }
+
+        private void tipoBoletoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoBoleto tipoBoletoVentana = new TipoBoleto();
+            tipoBoletoVentana.Show();
+        }
+
+        private void salaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sala salaVentana = new Sala();
+            salaVentana.Show();
+        }
     }
 }

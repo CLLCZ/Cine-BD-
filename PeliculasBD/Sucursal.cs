@@ -222,10 +222,7 @@ namespace PeliculasBD
             if (resultado == DialogResult.Yes)
             {
                 Editar = false;
-                txtNombreSucursal.Text = "";
-                txtIdSucursal.Text = "";
-                txtDireccion.Text = "";
-                cmbCiudad.SelectedIndex = -1;
+                dgvSucursal_SelectionChanged(sender, e);
 
                 txtNombreSucursal.Enabled = false;
                 txtDireccion.Enabled = false;
