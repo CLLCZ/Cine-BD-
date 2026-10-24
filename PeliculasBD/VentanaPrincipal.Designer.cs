@@ -66,28 +66,28 @@
             // peliculaToolStripMenuItem
             // 
             peliculaToolStripMenuItem.Name = "peliculaToolStripMenuItem";
-            peliculaToolStripMenuItem.Size = new Size(270, 34);
+            peliculaToolStripMenuItem.Size = new Size(210, 34);
             peliculaToolStripMenuItem.Text = "Pelicula";
             peliculaToolStripMenuItem.Click += peliculaToolStripMenuItem_Click;
             // 
             // generoToolStripMenuItem
             // 
             generoToolStripMenuItem.Name = "generoToolStripMenuItem";
-            generoToolStripMenuItem.Size = new Size(270, 34);
+            generoToolStripMenuItem.Size = new Size(210, 34);
             generoToolStripMenuItem.Text = "Género";
             generoToolStripMenuItem.Click += generoToolStripMenuItem_Click;
             // 
             // clasificacionToolStripMenuItem
             // 
             clasificacionToolStripMenuItem.Name = "clasificacionToolStripMenuItem";
-            clasificacionToolStripMenuItem.Size = new Size(270, 34);
+            clasificacionToolStripMenuItem.Size = new Size(210, 34);
             clasificacionToolStripMenuItem.Text = "Clasificación";
             clasificacionToolStripMenuItem.Click += clasificacionToolStripMenuItem_Click;
             // 
             // tipoBoletoToolStripMenuItem
             // 
             tipoBoletoToolStripMenuItem.Name = "tipoBoletoToolStripMenuItem";
-            tipoBoletoToolStripMenuItem.Size = new Size(270, 34);
+            tipoBoletoToolStripMenuItem.Size = new Size(210, 34);
             tipoBoletoToolStripMenuItem.Text = "Tipo Boleto";
             tipoBoletoToolStripMenuItem.Click += tipoBoletoToolStripMenuItem_Click;
             // 
@@ -103,6 +103,7 @@
             funciónToolStripMenuItem.Name = "funciónToolStripMenuItem";
             funciónToolStripMenuItem.Size = new Size(270, 34);
             funciónToolStripMenuItem.Text = "Función";
+            funciónToolStripMenuItem.Click += funciónToolStripMenuItem_Click;
             // 
             // salaToolStripMenuItem
             // 

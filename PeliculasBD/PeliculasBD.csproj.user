@@ -13,6 +13,9 @@
     <Compile Update="Estado.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Funcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Genero.cs">
       <SubType>Form</SubType>
     </Compile>

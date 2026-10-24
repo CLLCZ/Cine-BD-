@@ -60,5 +60,11 @@ namespace PeliculasBD
             Sala salaVentana = new Sala();
             salaVentana.Show();
         }
+
+        private void funciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Funcion funcionVentana = new Funcion();
+            funcionVentana.Show();
+        }
     }
 }
