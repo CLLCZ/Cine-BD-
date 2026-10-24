@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvpelicula = new DataGridView();
+            dgvPelicula = new DataGridView();
             toolStrip1 = new ToolStrip();
             btnNuevo = new ToolStripLabel();
             btnEditar = new ToolStripLabel();
@@ -45,25 +45,27 @@
             txtidPelicula = new TextBox();
             txtnombrePelicula = new TextBox();
             txtduracion = new TextBox();
-            txtidGenero = new TextBox();
-            txtidClasificacion = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dgvpelicula).BeginInit();
+            cbGenero = new ComboBox();
+            cbClasificacion = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dgvPelicula).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // dgvpelicula
+            // dgvPelicula
             // 
-            dgvpelicula.AllowUserToAddRows = false;
-            dgvpelicula.AllowUserToDeleteRows = false;
-            dgvpelicula.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvpelicula.Location = new Point(33, 45);
-            dgvpelicula.Margin = new Padding(2);
-            dgvpelicula.Name = "dgvpelicula";
-            dgvpelicula.ReadOnly = true;
-            dgvpelicula.RowHeadersWidth = 62;
-            dgvpelicula.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvpelicula.Size = new Size(736, 261);
-            dgvpelicula.TabIndex = 3;
+            dgvPelicula.AllowUserToAddRows = false;
+            dgvPelicula.AllowUserToDeleteRows = false;
+            dgvPelicula.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvPelicula.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPelicula.Location = new Point(41, 56);
+            dgvPelicula.Margin = new Padding(2);
+            dgvPelicula.Name = "dgvPelicula";
+            dgvPelicula.ReadOnly = true;
+            dgvPelicula.RowHeadersWidth = 62;
+            dgvPelicula.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPelicula.Size = new Size(920, 326);
+            dgvPelicula.TabIndex = 3;
+            dgvPelicula.SelectionChanged += dgvPelicula_SelectionChanged;
             // 
             // toolStrip1
             // 
@@ -71,140 +73,165 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnNuevo, btnEditar, btnEliminar, btnGuardar, btnCancelar, btnObtener, btnSalir });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(1000, 30);
             toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStrip1";
             // 
             // btnNuevo
             // 
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(52, 22);
+            btnNuevo.Size = new Size(64, 25);
             btnNuevo.Text = "Nuevo";
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnEditar
             // 
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(48, 22);
+            btnEditar.Size = new Size(57, 25);
             btnEditar.Text = "Editar";
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnEliminar
             // 
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(63, 22);
+            btnEliminar.Size = new Size(74, 25);
             btnEliminar.Text = "Eliminar";
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
+            btnGuardar.Enabled = false;
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(62, 22);
+            btnGuardar.Size = new Size(75, 25);
             btnGuardar.Text = "Guardar";
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCancelar
             // 
+            btnCancelar.Enabled = false;
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(66, 22);
+            btnCancelar.Size = new Size(78, 25);
             btnCancelar.Text = "Cancelar";
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnObtener
             // 
             btnObtener.Name = "btnObtener";
-            btnObtener.Size = new Size(106, 22);
+            btnObtener.Size = new Size(129, 25);
             btnObtener.Text = "Obtener Datos";
+            btnObtener.Click += btnObtener_Click;
             // 
             // btnSalir
             // 
             btnSalir.Alignment = ToolStripItemAlignment.Right;
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(38, 22);
+            btnSalir.Size = new Size(45, 25);
             btnSalir.Text = "Salir";
+            btnSalir.Click += btnSalir_Click;
             // 
             // lbidGenero
             // 
             lbidGenero.AutoSize = true;
-            lbidGenero.Location = new Point(434, 338);
+            lbidGenero.Location = new Point(615, 425);
+            lbidGenero.Margin = new Padding(4, 0, 4, 0);
             lbidGenero.Name = "lbidGenero";
-            lbidGenero.Size = new Size(79, 20);
+            lbidGenero.Size = new Size(73, 25);
             lbidGenero.TabIndex = 9;
-            lbidGenero.Text = "ID Género:";
+            lbidGenero.Text = "Género:";
             // 
             // lbduracion
             // 
             lbduracion.AutoSize = true;
-            lbduracion.Location = new Point(89, 428);
+            lbduracion.Location = new Point(175, 563);
+            lbduracion.Margin = new Padding(4, 0, 4, 0);
             lbduracion.Name = "lbduracion";
-            lbduracion.Size = new Size(76, 20);
+            lbduracion.Size = new Size(92, 25);
             lbduracion.TabIndex = 8;
             lbduracion.Text = "Duración: ";
             // 
             // lbnombrePelicula
             // 
             lbnombrePelicula.AutoSize = true;
-            lbnombrePelicula.Location = new Point(89, 382);
+            lbnombrePelicula.Location = new Point(118, 490);
+            lbnombrePelicula.Margin = new Padding(4, 0, 4, 0);
             lbnombrePelicula.Name = "lbnombrePelicula";
-            lbnombrePelicula.Size = new Size(125, 20);
+            lbnombrePelicula.Size = new Size(149, 25);
             lbnombrePelicula.TabIndex = 7;
             lbnombrePelicula.Text = "Nombre Pelicula: ";
             // 
             // lbidPelicula
             // 
             lbidPelicula.AutoSize = true;
-            lbidPelicula.Location = new Point(89, 338);
+            lbidPelicula.Location = new Point(166, 422);
+            lbidPelicula.Margin = new Padding(4, 0, 4, 0);
             lbidPelicula.Name = "lbidPelicula";
-            lbidPelicula.Size = new Size(85, 20);
+            lbidPelicula.Size = new Size(101, 25);
             lbidPelicula.TabIndex = 6;
             lbidPelicula.Text = "ID Pelicula: ";
             // 
             // lbidClasificacion
             // 
             lbidClasificacion.AutoSize = true;
-            lbidClasificacion.Location = new Point(434, 395);
+            lbidClasificacion.Location = new Point(576, 493);
+            lbidClasificacion.Margin = new Padding(4, 0, 4, 0);
             lbidClasificacion.Name = "lbidClasificacion";
-            lbidClasificacion.Size = new Size(114, 20);
+            lbidClasificacion.Size = new Size(112, 25);
             lbidClasificacion.TabIndex = 10;
-            lbidClasificacion.Text = "ID Clasificación:";
+            lbidClasificacion.Text = "Clasificación:";
             // 
             // txtidPelicula
             // 
-            txtidPelicula.Location = new Point(220, 335);
+            txtidPelicula.Location = new Point(275, 419);
+            txtidPelicula.Margin = new Padding(4);
             txtidPelicula.Name = "txtidPelicula";
-            txtidPelicula.Size = new Size(125, 27);
+            txtidPelicula.ReadOnly = true;
+            txtidPelicula.Size = new Size(155, 31);
             txtidPelicula.TabIndex = 11;
             // 
             // txtnombrePelicula
             // 
-            txtnombrePelicula.Location = new Point(220, 379);
+            txtnombrePelicula.Enabled = false;
+            txtnombrePelicula.Location = new Point(275, 474);
+            txtnombrePelicula.Margin = new Padding(4);
+            txtnombrePelicula.Multiline = true;
             txtnombrePelicula.Name = "txtnombrePelicula";
-            txtnombrePelicula.Size = new Size(125, 27);
+            txtnombrePelicula.Size = new Size(214, 59);
             txtnombrePelicula.TabIndex = 12;
             // 
             // txtduracion
             // 
-            txtduracion.Location = new Point(220, 425);
+            txtduracion.Enabled = false;
+            txtduracion.Location = new Point(275, 560);
+            txtduracion.Margin = new Padding(4);
             txtduracion.Name = "txtduracion";
-            txtduracion.Size = new Size(125, 27);
+            txtduracion.Size = new Size(155, 31);
             txtduracion.TabIndex = 13;
             // 
-            // txtidGenero
+            // cbGenero
             // 
-            txtidGenero.Location = new Point(557, 335);
-            txtidGenero.Name = "txtidGenero";
-            txtidGenero.Size = new Size(125, 27);
-            txtidGenero.TabIndex = 14;
+            cbGenero.Enabled = false;
+            cbGenero.FormattingEnabled = true;
+            cbGenero.Location = new Point(695, 422);
+            cbGenero.Name = "cbGenero";
+            cbGenero.Size = new Size(182, 33);
+            cbGenero.TabIndex = 14;
             // 
-            // txtidClasificacion
+            // cbClasificacion
             // 
-            txtidClasificacion.Location = new Point(557, 392);
-            txtidClasificacion.Name = "txtidClasificacion";
-            txtidClasificacion.Size = new Size(125, 27);
-            txtidClasificacion.TabIndex = 15;
+            cbClasificacion.Enabled = false;
+            cbClasificacion.FormattingEnabled = true;
+            cbClasificacion.Location = new Point(695, 487);
+            cbClasificacion.Name = "cbClasificacion";
+            cbClasificacion.Size = new Size(182, 33);
+            cbClasificacion.TabIndex = 15;
             // 
             // Pelicula
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 562);
-            Controls.Add(txtidClasificacion);
-            Controls.Add(txtidGenero);
+            ClientSize = new Size(1000, 702);
+            Controls.Add(cbClasificacion);
+            Controls.Add(cbGenero);
             Controls.Add(txtduracion);
             Controls.Add(txtnombrePelicula);
             Controls.Add(txtidPelicula);
@@ -213,11 +240,12 @@
             Controls.Add(lbduracion);
             Controls.Add(lbnombrePelicula);
             Controls.Add(lbidPelicula);
-            Controls.Add(dgvpelicula);
+            Controls.Add(dgvPelicula);
             Controls.Add(toolStrip1);
+            Margin = new Padding(4);
             Name = "Pelicula";
             Text = "Pelicula";
-            ((System.ComponentModel.ISupportInitialize)dgvpelicula).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPelicula).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);
@@ -226,7 +254,7 @@
 
         #endregion
 
-        private DataGridView dgvpelicula;
+        private DataGridView dgvPelicula;
         private ToolStrip toolStrip1;
         private ToolStripLabel btnNuevo;
         private ToolStripLabel btnEditar;
@@ -243,7 +271,7 @@
         private TextBox txtidPelicula;
         private TextBox txtnombrePelicula;
         private TextBox txtduracion;
-        private TextBox txtidGenero;
-        private TextBox txtidClasificacion;
+        private ComboBox cbGenero;
+        private ComboBox cbClasificacion;
     }
 }

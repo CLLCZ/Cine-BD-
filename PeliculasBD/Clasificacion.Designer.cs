@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             toolStrip1 = new ToolStrip();
             btnNuevo = new ToolStripLabel();
             btnEditar = new ToolStripLabel();
@@ -119,23 +119,23 @@
             // 
             dgvClasificacion.AllowUserToAddRows = false;
             dgvClasificacion.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvClasificacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvClasificacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvClasificacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvClasificacion.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvClasificacion.DefaultCellStyle = dataGridViewCellStyle2;
             dgvClasificacion.Location = new Point(45, 68);
             dgvClasificacion.Margin = new Padding(2);
             dgvClasificacion.Name = "dgvClasificacion";
@@ -179,7 +179,7 @@
             // lbfechaHoraCreacion
             // 
             lbfechaHoraCreacion.AutoSize = true;
-            lbfechaHoraCreacion.Location = new Point(455, 504);
+            lbfechaHoraCreacion.Location = new Point(455, 560);
             lbfechaHoraCreacion.Margin = new Padding(4, 0, 4, 0);
             lbfechaHoraCreacion.Name = "lbfechaHoraCreacion";
             lbfechaHoraCreacion.Size = new Size(237, 25);
@@ -212,7 +212,7 @@
             // dateTimePickerFechaCreacion
             // 
             dateTimePickerFechaCreacion.Enabled = false;
-            dateTimePickerFechaCreacion.Location = new Point(710, 504);
+            dateTimePickerFechaCreacion.Location = new Point(710, 560);
             dateTimePickerFechaCreacion.Margin = new Padding(4);
             dateTimePickerFechaCreacion.Name = "dateTimePickerFechaCreacion";
             dateTimePickerFechaCreacion.Size = new Size(370, 31);
@@ -230,8 +230,9 @@
             // 
             txtDescrip.Enabled = false;
             txtDescrip.Location = new Point(710, 440);
+            txtDescrip.Multiline = true;
             txtDescrip.Name = "txtDescrip";
-            txtDescrip.Size = new Size(370, 31);
+            txtDescrip.Size = new Size(370, 89);
             txtDescrip.TabIndex = 12;
             // 
             // Clasificacion
