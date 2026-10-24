@@ -66,5 +66,11 @@ namespace PeliculasBD
             Funcion funcionVentana = new Funcion();
             funcionVentana.Show();
         }
+
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Venta ventaVentana = new Venta();
+            ventaVentana.Show();
+        }
     }
 }

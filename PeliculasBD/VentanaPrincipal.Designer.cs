@@ -144,13 +144,14 @@
             // ventaToolStripMenuItem
             // 
             ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            ventaToolStripMenuItem.Size = new Size(167, 34);
+            ventaToolStripMenuItem.Size = new Size(270, 34);
             ventaToolStripMenuItem.Text = "Venta";
+            ventaToolStripMenuItem.Click += ventaToolStripMenuItem_Click;
             // 
             // clienteToolStripMenuItem
             // 
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            clienteToolStripMenuItem.Size = new Size(167, 34);
+            clienteToolStripMenuItem.Size = new Size(270, 34);
             clienteToolStripMenuItem.Text = "Cliente";
             clienteToolStripMenuItem.Click += clienteToolStripMenuItem_Click;
             // 

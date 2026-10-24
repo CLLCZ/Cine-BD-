@@ -136,3 +136,4 @@ C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\
 C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\PeliculasBD.TipoBoleto.resources
 C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\PeliculasBD.Sala.resources
 C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\PeliculasBD.Funcion.resources
+C:\Users\usuario\source\repos\ProyectoCine\PeliculasBD\obj\Debug\net8.0-windows\PeliculasBD.Venta.resources
