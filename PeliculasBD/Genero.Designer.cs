@@ -43,9 +43,9 @@
             lbnombreGenero = new Label();
             lbdescripcionGenero = new Label();
             txtidGenero = new TextBox();
-            cbnombreGenero = new ComboBox();
             cbdescripciongenero = new ComboBox();
-            comboBox1 = new ComboBox();
+            txtnombreGenero = new TextBox();
+            txtdescripcionGenero = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvGenero).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -54,6 +54,7 @@
             // 
             dgvGenero.AllowUserToAddRows = false;
             dgvGenero.AllowUserToDeleteRows = false;
+            dgvGenero.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
@@ -71,14 +72,15 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvGenero.DefaultCellStyle = dataGridViewCellStyle2;
-            dgvGenero.Location = new Point(35, 42);
+            dgvGenero.Location = new Point(44, 52);
             dgvGenero.Margin = new Padding(2);
             dgvGenero.Name = "dgvGenero";
             dgvGenero.ReadOnly = true;
             dgvGenero.RowHeadersWidth = 62;
             dgvGenero.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvGenero.Size = new Size(732, 235);
+            dgvGenero.Size = new Size(915, 294);
             dgvGenero.TabIndex = 3;
+            dgvGenero.SelectionChanged += dgvGenero_SelectionChanged;
             // 
             // toolStrip1
             // 
@@ -86,124 +88,139 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnNuevo, btnEditar, btnEliminar, btnGuardar, btnCancelar, btnObtener, btnSalir });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(1000, 30);
             toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStrip1";
             // 
             // btnNuevo
             // 
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(52, 22);
+            btnNuevo.Size = new Size(64, 25);
             btnNuevo.Text = "Nuevo";
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnEditar
             // 
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(48, 22);
+            btnEditar.Size = new Size(57, 25);
             btnEditar.Text = "Editar";
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnEliminar
             // 
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(63, 22);
+            btnEliminar.Size = new Size(74, 25);
             btnEliminar.Text = "Eliminar";
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
+            btnGuardar.Enabled = false;
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(62, 22);
+            btnGuardar.Size = new Size(75, 25);
             btnGuardar.Text = "Guardar";
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCancelar
             // 
+            btnCancelar.Enabled = false;
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(66, 22);
+            btnCancelar.Size = new Size(78, 25);
             btnCancelar.Text = "Cancelar";
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnObtener
             // 
             btnObtener.Name = "btnObtener";
-            btnObtener.Size = new Size(106, 22);
+            btnObtener.Size = new Size(129, 25);
             btnObtener.Text = "Obtener Datos";
+            btnObtener.Click += btnObtener_Click;
             // 
             // btnSalir
             // 
             btnSalir.Alignment = ToolStripItemAlignment.Right;
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(38, 22);
+            btnSalir.Size = new Size(45, 25);
             btnSalir.Text = "Salir";
+            btnSalir.Click += btnSalir_Click;
             // 
             // lbidGenero
             // 
             lbidGenero.AutoSize = true;
-            lbidGenero.Location = new Point(86, 315);
+            lbidGenero.Location = new Point(145, 394);
+            lbidGenero.Margin = new Padding(4, 0, 4, 0);
             lbidGenero.Name = "lbidGenero";
-            lbidGenero.Size = new Size(83, 20);
+            lbidGenero.Size = new Size(101, 25);
             lbidGenero.TabIndex = 4;
             lbidGenero.Text = "ID Genero: ";
             // 
             // lbnombreGenero
             // 
             lbnombreGenero.AutoSize = true;
-            lbnombreGenero.Location = new Point(64, 366);
+            lbnombreGenero.Location = new Point(80, 458);
+            lbnombreGenero.Margin = new Padding(4, 0, 4, 0);
             lbnombreGenero.Name = "lbnombreGenero";
-            lbnombreGenero.Size = new Size(148, 20);
+            lbnombreGenero.Size = new Size(178, 25);
             lbnombreGenero.TabIndex = 5;
             lbnombreGenero.Text = "Nombre del Genero: ";
             // 
             // lbdescripcionGenero
             // 
             lbdescripcionGenero.AutoSize = true;
-            lbdescripcionGenero.Location = new Point(408, 310);
+            lbdescripcionGenero.Location = new Point(510, 388);
+            lbdescripcionGenero.Margin = new Padding(4, 0, 4, 0);
             lbdescripcionGenero.Name = "lbdescripcionGenero";
-            lbdescripcionGenero.Size = new Size(167, 20);
+            lbdescripcionGenero.Size = new Size(199, 25);
             lbdescripcionGenero.TabIndex = 6;
             lbdescripcionGenero.Text = "Descripción del Genero:";
             // 
             // txtidGenero
             // 
-            txtidGenero.Location = new Point(231, 312);
+            txtidGenero.Location = new Point(254, 391);
+            txtidGenero.Margin = new Padding(4);
             txtidGenero.Name = "txtidGenero";
-            txtidGenero.Size = new Size(149, 27);
+            txtidGenero.ReadOnly = true;
+            txtidGenero.Size = new Size(185, 31);
             txtidGenero.TabIndex = 7;
-            // 
-            // cbnombreGenero
-            // 
-            cbnombreGenero.FormattingEnabled = true;
-            cbnombreGenero.Items.AddRange(new object[] { "Drama", "Aventura", "Acción", "Comedia", "Terror", "Romance", "Humor negro", "Ciencia Ficción", "Fantasía", "Musical ", "Suspenso" });
-            cbnombreGenero.Location = new Point(231, 363);
-            cbnombreGenero.Name = "cbnombreGenero";
-            cbnombreGenero.Size = new Size(151, 28);
-            cbnombreGenero.TabIndex = 10;
             // 
             // cbdescripciongenero
             // 
             cbdescripciongenero.Location = new Point(0, 0);
             cbdescripciongenero.Name = "cbdescripciongenero";
-            cbdescripciongenero.Size = new Size(121, 28);
+            cbdescripciongenero.Size = new Size(121, 33);
             cbdescripciongenero.TabIndex = 0;
             // 
-            // comboBox1
+            // txtnombreGenero
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(581, 310);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 11;
+            txtnombreGenero.Enabled = false;
+            txtnombreGenero.Location = new Point(254, 455);
+            txtnombreGenero.Name = "txtnombreGenero";
+            txtnombreGenero.Size = new Size(185, 31);
+            txtnombreGenero.TabIndex = 8;
+            // 
+            // txtdescripcionGenero
+            // 
+            txtdescripcionGenero.Enabled = false;
+            txtdescripcionGenero.Location = new Point(716, 385);
+            txtdescripcionGenero.Multiline = true;
+            txtdescripcionGenero.Name = "txtdescripcionGenero";
+            txtdescripcionGenero.Size = new Size(243, 83);
+            txtdescripcionGenero.TabIndex = 9;
             // 
             // Genero
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(comboBox1);
-            Controls.Add(cbnombreGenero);
+            ClientSize = new Size(1000, 562);
+            Controls.Add(txtdescripcionGenero);
+            Controls.Add(txtnombreGenero);
             Controls.Add(txtidGenero);
             Controls.Add(lbdescripcionGenero);
             Controls.Add(lbnombreGenero);
             Controls.Add(lbidGenero);
             Controls.Add(dgvGenero);
             Controls.Add(toolStrip1);
+            Margin = new Padding(4);
             Name = "Genero";
             Text = "Genero";
             ((System.ComponentModel.ISupportInitialize)dgvGenero).EndInit();
@@ -228,9 +245,9 @@
         private Label lbnombreGenero;
         private Label lbdescripcionGenero;
         private TextBox txtidGenero;
-        private ComboBox cbnombreGenero;
         private ComboBox cbdescripciongenero;
         private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private TextBox txtnombreGenero;
+        private TextBox txtdescripcionGenero;
     }
 }
